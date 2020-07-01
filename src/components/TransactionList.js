@@ -29,9 +29,10 @@ export const TransactionList = () => {
       <ul className="list-group">
         {transactions.map((transaction, index) => {
           const selected = days && days.find(p => p.cpf === transaction.cpf);
-          const checkCafe = selected && selected.cafe === 'S';
-          const checkAlmoco = selected && selected.almoco === 'S';
-          const checkJantar = selected && selected.jantar === 'S';
+            const checkCafe = selected && selected.cafe === 'S' ?  true : false;
+            const checkAlmoco = selected && selected.almoco === 'S' ?  true : false;
+            const checkJantar = selected && selected.jantar === 'S' ?  true : false;
+            console.log('list',checkCafe, typeof(checkCafe), transaction.nomeguerra)
             return(
               <Transaction key={transaction.id} index={index} checkCafe={checkCafe} checkAlmoco={checkAlmoco} checkJantar={checkJantar} transaction={transaction} />
             )

@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const Transaction = ({ transaction, index, checkCafe, checkAlmoco, checkJantar }) => {
+  // if (typeof checkCafe == 'undefined' || !checkCafe || checkCafe != true) { checkCafe = false; console.log('type',checkCafe, transaction.nomeguerra) } 
   return (
     <li className='list-group-item list-group-item-dark text-white list-group-item-action'>
       <div className="d-flex w-100 justify-content-between">
@@ -12,7 +13,8 @@ export const Transaction = ({ transaction, index, checkCafe, checkAlmoco, checkJ
             type='checkbox' 
             className='custom-control-input' 
             id={'data['+index+'].cafe'} 
-            defaultChecked={checkCafe} 
+            checked={checkCafe} 
+            onChange={() =>checkCafe}
           />
           <label className="custom-control-label" htmlFor={'data['+index+'].cafe'}>Café</label>
         </div>
@@ -21,7 +23,8 @@ export const Transaction = ({ transaction, index, checkCafe, checkAlmoco, checkJ
             type="checkbox" 
             className="custom-control-input" 
             id={'data['+index+'].almoco'} 
-            defaultChecked={checkAlmoco} 
+            checked={checkAlmoco} 
+            onChange={() => checkAlmoco}
           />
           <label className="custom-control-label" htmlFor={'data['+index+'].almoco'}>Almoço</label>
         </div>
@@ -30,7 +33,8 @@ export const Transaction = ({ transaction, index, checkCafe, checkAlmoco, checkJ
             type="checkbox" 
             className="custom-control-input" 
             id={'data['+index+'].jantar'} 
-            defaultChecked={checkJantar} 
+            checked={checkJantar} 
+            onChange={() => checkJantar}
           />
           <label className="custom-control-label" htmlFor={'data['+index+'].jantar'}>Jantar</label>
         </div>
