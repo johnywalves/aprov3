@@ -6,6 +6,11 @@ export default (state, action) => {
         loading: false,
         transactions: action.payload
       }
+    case 'GET_DAYS':
+      return {
+        ...state,
+        days: action.payload
+      }
     case 'TRANSACTION_ERROR':
       return {
         ...state,
