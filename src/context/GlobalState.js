@@ -20,7 +20,7 @@ export const GlobalProvider = ({ children }) => {
   // Actions
   async function getTransactions() {
     try {
-      const res = await axios.get('http://localhost:8000/api/militar/read.php')
+      const res = await axios.get('http://10.79.28.72/arranchamento/sistema/crud/api/militar/read.php')
 
       dispatch({
         type: 'GET_TRANSACTIONS',
@@ -34,9 +34,9 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  async function getDays() {
+  async function getDays(date) {
     try {
-      const res = await axios.get('http://localhost:8000/api/arranchamento/read_data.php?data=2020-06-01')
+      const res = await axios.get(`http://10.79.28.72/arranchamento/sistema/crud/api/arranchamento/read_data.php?data=${date}`)
 
       dispatch({
         type: 'GET_DAYS',
