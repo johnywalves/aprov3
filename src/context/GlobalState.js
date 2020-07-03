@@ -20,11 +20,11 @@ export const GlobalProvider = ({ children }) => {
   // Actions
   async function getTransactions() {
     try {
-      const res = await axios.get('http://10.79.28.72/arranchamento/sistema/crud/api/militar/read.php')
+      const res = await axios.get('http://localhost:5000/militares')
 
       dispatch({
         type: 'GET_TRANSACTIONS',
-        payload: res.data.data
+        payload: res.data
       })
     } catch (err) {
       dispatch({
@@ -36,11 +36,11 @@ export const GlobalProvider = ({ children }) => {
 
   async function getDays(date) {
     try {
-      const res = await axios.get(`http://10.79.28.72/arranchamento/sistema/crud/api/arranchamento/read_data.php?data=${date}`)
+      const res = await axios.get(`http://localhost:5000/arranchamento?data=${date}`)
 
       dispatch({
         type: 'GET_DAYS',
-        payload: res.data.data
+        payload: res.data
       })
     } catch (err) {
       dispatch({
