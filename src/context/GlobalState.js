@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useReducer, useCallback } from 'react'
 import AppReducer from './AppReducer'
 import axios from 'axios'
 
@@ -18,7 +18,7 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState)
 
   // Actions
-  async function getTransactions() {
+  const getTransactions = useCallback(async () => {
     try {
       const res = await axios.get('http://localhost:5000/militares')
 
@@ -32,9 +32,9 @@ export const GlobalProvider = ({ children }) => {
         payload: err.response.data.error
       })
     }
-  }
+  }, [])
 
-  async function getDays(date) {
+  const getDays = useCallback(async (date) => {
     try {
       const res = await axios.get(`http://localhost:5000/arranchamento?data=${date}`)
 
@@ -48,9 +48,9 @@ export const GlobalProvider = ({ children }) => {
         payload: err.response.data.error
       })
     }
-  }
+  }, [])
 
-  return(<GlobalContext.Provider value={{
+  return (<GlobalContext.Provider value={{
     transactions: state.transactions,
     error: state.error,
     loading: state.loading,

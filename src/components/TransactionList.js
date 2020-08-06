@@ -1,50 +1,54 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { GlobalContext } from '../context/GlobalState'
-import { Transaction } from './Transaction'
-import { useForm } from 'react-hook-form'
+import React, { useContext, useEffect, useState } from "react";
+import { GlobalContext } from "../context/GlobalState";
+import Transaction from "./Transaction";
+import { useForm } from "react-hook-form";
 
 export const TransactionList = () => {
-  const [date, setDate] = useState('')
-  const { transactions, getTransactions } = useContext(GlobalContext)
-  const { days, getDays } = useContext(GlobalContext)
+  const [date, setDate] = useState("");
+  const { transactions, getTransactions } = useContext(GlobalContext);
+  const { days, getDays } = useContext(GlobalContext);
 
   const handleChange = (e) => {
-    setDate(e.target.value) }
-    // console.log(date)
-  useEffect(() => {
-    getTransactions()
-    getDays(date)
-    // eslint-disable-next-line
-  }, [date])
-  // console.log('days',days)
+    setDate(e.target.value);
+  };
 
-  const { register, handleSubmit } = useForm()
-  const onSubmit = data => console.log(data)
+  useEffect(() => {
+    getTransactions();
+    getDays(date);
+  }, [date, getDays, getTransactions]);
+
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   return (
     <>
-      <input 
-        className="form-control my-3" 
+      <input
+        className="form-control my-3"
         type="date"
         onChange={handleChange}
         value={date}
-        style={{width: 150}} 
+        style={{ width: 150 }}
       />
       <form onSubmit={handleSubmit(onSubmit)}>
         <ul className="list-group">
           {transactions.map((transaction, index) => {
-            const selected = days && days.find(p => p.cpf === transaction.cpf);
-              const checkCafe = selected && selected.cafe === 'S';
-              const checkAlmoco = selected && selected.almoco === 'S';
-              const checkJantar = selected && selected.jantar === 'S';
-              // console.log('list',checkCafe, typeof(checkCafe), transaction.nomeguerra)
-              return(
-                <Transaction key={transaction.id} register={register} index={index} checkCafe={checkCafe} checkAlmoco={checkAlmoco} checkJantar={checkJantar} transaction={transaction} />
-              )
+            const selected =
+              days && days.find((p) => p.cpf === transaction.cpf);
+            return (
+              <Transaction
+                key={transaction.id}
+                index={index}
+                register={register}
+                {...transaction}
+                {...selected}
+              />
+            );
           })}
         </ul>
-        <button type='submit' className="btn btn-success">Salvar</button>
+        <button type="submit" className="btn btn-success">
+          Salvar
+        </button>
       </form>
     </>
-  )
-}
+  );
+};
