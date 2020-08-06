@@ -1,5 +1,5 @@
 export default (state, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'GET_TRANSACTIONS':
       return {
         ...state,

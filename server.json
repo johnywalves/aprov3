@@ -1,191 +1,172 @@
-{   "arranchamento":[      {
-         "id":"1210",
-         "cpf":"71763392287",
-         "data":"2020-05-27",
-         "cafe":"S",
-         "almoco":"S",
-         "jantar":"N",
-         "hierarquia":11
-      
-},
-      {
-         "id":"1215",
-         "cpf":"71763392287",
-         "data":"2020-06-01",
-         "cafe":"S",
-         "almoco":"S",
-         "jantar":"N",
-         "hierarquia":11
-      
-},
-      {
-         "id":"1216",
-         "cpf":"71763392287",
-         "data":"2020-05-25",
-         "cafe":"N",
-         "almoco":"N",
-         "jantar":"N",
-         "hierarquia":11
-      
-},
-      {
-         "id":"1217",
-         "cpf":"71763392287",
-         "data":"2020-05-26",
-         "cafe":"N",
-         "almoco":"N",
-         "jantar":"N",
-         "hierarquia":11
-      
-},
-      {
-         "id":"1218",
-         "cpf":"71763392287",
-         "data":"2020-05-28",
-         "cafe":"S",
-         "almoco":"N",
-         "jantar":"N",
-         "hierarquia":11
-      
-},
-      {
-         "id":"1219",
-         "cpf":"71763392287",
-         "data":"2020-05-29",
-         "cafe":"S",
-         "almoco":"N",
-         "jantar":"N",
-         "hierarquia":11
-      
-},
-      {
-         "id":"1220",
-         "cpf":"71763392287",
-         "data":"2020-05-30",
-         "cafe":"S",
-         "almoco":"N",
-         "jantar":"N",
-         "hierarquia":11
-      
-},
-      {
-         "id":"1221",
-         "cpf":"71763392287",
-         "data":"2020-05-31",
-         "cafe":"S",
-         "almoco":"N",
-         "jantar":"N",
-         "hierarquia":11
-      
-},
-      {
-         "id":"1224",
-         "cpf":"20928223655",
-         "data":"2020-05-27",
-         "cafe":"S",
-         "almoco":"S",
-         "jantar":"N",
-         "hierarquia":13
-      
-},
-      {
-         "id":"1225",
-         "cpf":"20928223655",
-         "data":"2020-05-28",
-         "cafe":"S",
-         "almoco":"S",
-         "jantar":"N",
-         "hierarquia":13
-      
-},
-      {
-         "id":"1229",
-         "cpf":"20928223655",
-         "data":"2020-06-01",
-         "cafe":"S",
-         "almoco":"S",
-         "jantar":"N",
-         "hierarquia":13
-      
-},
-      {
-         "id":"1230",
-         "cpf":"71763392287",
-         "data":"2020-07-01",
-         "cafe":"S",
-         "almoco":"N",
-         "jantar":"N",
-         "hierarquia":11
-      
-},
-      {
-         "id":"1231",
-         "cpf":"0131847147",
-         "data":"2020-07-01",
-         "cafe":"S",
-         "almoco":"N",
-         "jantar":"N",
-         "hierarquia":9
-      
-},
-      {
-         "id":"1232",
-         "cpf":"0200322873",
-         "data":"2020-07-01",
-         "cafe":"S",
-         "almoco":"N",
-         "jantar":"N",
-         "hierarquia":11
-      
+{
+  "arranchamento": [
+    {
+      "id": "1210",
+      "cpf": "71763392287",
+      "data": "2020-05-27",
+      "cafe": "S",
+      "almoco": "S",
+      "jantar": "N",
+      "hierarquia": 11
+    },
+    {
+      "id": "1215",
+      "cpf": "71763392287",
+      "data": "2020-06-01",
+      "cafe": "S",
+      "almoco": "S",
+      "jantar": "N",
+      "hierarquia": 11
+    },
+    {
+      "id": "1216",
+      "cpf": "71763392287",
+      "data": "2020-05-25",
+      "cafe": "N",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11
+    },
+    {
+      "id": "1217",
+      "cpf": "71763392287",
+      "data": "2020-05-26",
+      "cafe": "N",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11
+    },
+    {
+      "id": "1218",
+      "cpf": "71763392287",
+      "data": "2020-05-28",
+      "cafe": "S",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11
+    },
+    {
+      "id": "1219",
+      "cpf": "71763392287",
+      "data": "2020-05-29",
+      "cafe": "S",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11
+    },
+    {
+      "id": "1220",
+      "cpf": "71763392287",
+      "data": "2020-05-30",
+      "cafe": "S",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11
+    },
+    {
+      "id": "1221",
+      "cpf": "71763392287",
+      "data": "2020-05-31",
+      "cafe": "S",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11
+    },
+    {
+      "id": "1224",
+      "cpf": "20928223655",
+      "data": "2020-05-27",
+      "cafe": "S",
+      "almoco": "S",
+      "jantar": "N",
+      "hierarquia": 13
+    },
+    {
+      "id": "1225",
+      "cpf": "20928223655",
+      "data": "2020-05-28",
+      "cafe": "S",
+      "almoco": "S",
+      "jantar": "N",
+      "hierarquia": 13
+    },
+    {
+      "id": "1229",
+      "cpf": "20928223655",
+      "data": "2020-06-01",
+      "cafe": "S",
+      "almoco": "S",
+      "jantar": "N",
+      "hierarquia": 13
+    },
+    {
+      "id": "1230",
+      "cpf": "71763392287",
+      "data": "2020-07-01",
+      "cafe": "S",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11
+    },
+    {
+      "id": "1231",
+      "cpf": "0131847147",
+      "data": "2020-07-01",
+      "cafe": "S",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 9
+    },
+    {
+      "id": "1232",
+      "cpf": "0200322873",
+      "data": "2020-07-01",
+      "cafe": "S",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11
+    }
+  ],
+  "militares": [
+    {
+      "id": "1986",
+      "cpf": "71763392287",
+      "nomecompleto": "ERICK VICTOR DE MELO BERNARDO",
+      "nomeguerra": "BERNARDO",
+      "posto": "3º Sgt",
+      "su": "OUTROS"
+    },
+    {
+      "id": "1987",
+      "cpf": "20928223655",
+      "nomecompleto": "KLEYSON SILVA",
+      "nomeguerra": "KLEYSON",
+      "posto": "SD",
+      "su": "CCAP"
+    },
+    {
+      "id": "1989",
+      "cpf": "0131847147",
+      "nomecompleto": "DANIEL RICARDO DA FONSECA",
+      "nomeguerra": "FONSECA",
+      "posto": "1º Sgt",
+      "su": "CCSv"
+    },
+    {
+      "id": "1990",
+      "cpf": "0200322873",
+      "nomecompleto": "DIEGO PORTUGAL E SILVA FEITOZA",
+      "nomeguerra": "FEITOZA",
+      "posto": "3º Sgt",
+      "su": "CIA MNT AP"
+    },
+    {
+      "id": "1992",
+      "cpf": "0200749372",
+      "nomecompleto": "JOÃO GABRIEL BRANDÃO",
+      "nomeguerra": "GABRIEL",
+      "posto": "3º Sgt",
+      "su": "CCSv"
+    }
+  ]
 }
-   
-],
-   "militares":[      {
-         "id":"1986",
-         "cpf":"71763392287",
-         "nomecompleto":"ERICK VICTOR DE MELO BERNARDO",
-         "nomeguerra":"BERNARDO",
-         "posto":"3º Sgt",
-         "su":"OUTROS"
-      
-},
-      {
-         "id":"1987",
-         "cpf":"20928223655",
-         "nomecompleto":"KLEYSON SILVA",
-         "nomeguerra":"KLEYSON",
-         "posto":"SD",
-         "su":"CCAP"
-      
-},
-      {
-         "id":"1989",
-         "cpf":"0131847147",
-         "nomecompleto":"DANIEL RICARDO DA FONSECA",
-         "nomeguerra":"FONSECA",
-         "posto":"1º Sgt",
-         "su":"CCSv"
-      
-},
-      {
-         "id":"1990",
-         "cpf":"0200322873",
-         "nomecompleto":"DIEGO PORTUGAL E SILVA FEITOZA",
-         "nomeguerra":"FEITOZA",
-         "posto":"3º Sgt",
-         "su":"CIA MNT AP"
-      
-},
-      {
-         "id":"1992",
-         "cpf":"0200749372",
-         "nomecompleto":"JOÃO GABRIEL BRANDÃO",
-         "nomeguerra":"GABRIEL",
-         "posto":"3º Sgt",
-         "su":"CCSv"
-      
-}
-   
-]
-}
-
