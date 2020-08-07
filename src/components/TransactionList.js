@@ -14,14 +14,6 @@ const getToday = () => {
   return `${year}-${month}-${day}`;
 }
 
-const getFormat = (text) => {
-  const date = new Date(text),
-    year = date.getFullYear(),
-    month = (date.getMonth() + 1).toString().padStart(2, '0'),
-    day = date.getDate().toString().padStart(2, '0');
-  return `${year}-${month}-${day}`;
-}
-
 export const TransactionList = () => {
   const [date, setDate] = useState(getToday())
   const { days, createDays, updateDays, getDays } = useContext(GlobalContext);
@@ -37,7 +29,7 @@ export const TransactionList = () => {
     days.forEach(day => {
       const obj = {
         militareId: day.id,
-        data: getFormat(date),
+        data: date,
         cafe: data[day.id].cafe ? 'S' : 'N',
         almoco: data[day.id].almoco ? 'S' : 'N',
         jantar: data[day.id].jantar ? 'S' : 'N',
