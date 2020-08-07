@@ -1,13 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Transaction = ({ index, register, posto, nomeguerra, cafe, almoco, jantar }) => {
-  const checkCafe = cafe === 'S';
-  const checkAlmoco = almoco === 'S';
-  const checkJantar = jantar === 'S';
-
+const Transaction = ({ id, register, posto, nomeguerra, cafe, almoco, jantar }) => {
   return (
-    <li className='list-group-item list-group-item-dark text-white list-group-item-action'>
+    <li className='list-group-item list-group-item-action'>
       <div className="d-flex w-100 justify-content-between">
         <div className='col'>
           <span>{posto}</span> {nomeguerra}
@@ -16,34 +12,34 @@ const Transaction = ({ index, register, posto, nomeguerra, cafe, almoco, jantar 
           <input
             type='checkbox'
             className='custom-control-input'
-            id={'data[' + index + '].cafe'}
-            name={'data[' + index + '].cafe'}
+            id={`${id}.cafe`}
+            name={`${id}.cafe`}
             ref={register}
-            defaultChecked={checkCafe}
+            defaultChecked={cafe}
           />
-          <label className="custom-control-label" htmlFor={'data[' + index + '].cafe'}>Café</label>
+          <label className="custom-control-label" htmlFor={`${id}.cafe`}>Café</label>
         </div>
         <div className="col custom-control custom-checkbox">
           <input
             type="checkbox"
             className="custom-control-input"
-            id={'data[' + index + '].almoco'}
-            name={'data[' + index + '].almoco'}
+            id={`${id}.almoco`}
+            name={`${id}.almoco`}
             ref={register}
-            defaultChecked={checkAlmoco}
+            defaultChecked={almoco}
           />
-          <label className="custom-control-label" htmlFor={'data[' + index + '].almoco'}>Almoço</label>
+          <label className="custom-control-label" htmlFor={`${id}.almoco`}>Almoço</label>
         </div>
         <div className="col custom-control custom-checkbox">
           <input
             type="checkbox"
             className="custom-control-input"
-            id={'data[' + index + '].jantar'}
-            name={'data[' + index + '].jantar'}
+            id={`${id}.jantar`}
+            name={`${id}.jantar`}
             ref={register}
-            defaultChecked={checkJantar}
+            defaultChecked={jantar}
           />
-          <label className="custom-control-label" htmlFor={'data[' + index + '].jantar'}>Jantar</label>
+          <label className="custom-control-label" htmlFor={`${id}.jantar`}>Jantar</label>
         </div>
       </div>
     </li>
@@ -51,13 +47,13 @@ const Transaction = ({ index, register, posto, nomeguerra, cafe, almoco, jantar 
 }
 
 Transaction.propTypes = {
-  index: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
   register: PropTypes.func.isRequired,
   posto: PropTypes.string.isRequired,
   nomeguerra: PropTypes.string.isRequired,
-  cafe: PropTypes.string,
-  almoco: PropTypes.string,
-  jantar: PropTypes.string,
+  cafe: PropTypes.bool.isRequired,
+  almoco: PropTypes.bool.isRequired,
+  jantar: PropTypes.bool.isRequired,
 };
 
 export default Transaction
