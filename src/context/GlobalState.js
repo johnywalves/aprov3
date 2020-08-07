@@ -10,6 +10,10 @@ const initialState = {
   loading: true
 }
 
+const headers = {
+  'Content-Type': 'application/json',
+}
+
 // Create context
 export const GlobalContext = createContext(initialState)
 
@@ -34,13 +38,40 @@ export const GlobalProvider = ({ children }) => {
     }
   }, [])
 
+  const createDays = useCallback(async (data) => {
+    console.log('createDays', data)
+    await axios.post("http://localhost:5000/arranchamentos", {
+      ...data
+    }, { headers })
+  }, [])
+
+  const updateDays = useCallback(async (id, data) => {
+    console.log('updateDays', id, data)
+    await axios.put(`http://localhost:5000/arranchamentos/${id}`, {
+      ...data
+    }, { headers })
+  }, [])
+
   const getDays = useCallback(async (date) => {
     try {
-      const res = await axios.get(`http://localhost:5000/arranchamento?data=${date}`)
+      const res = await axios.get(`http://localhost:5000/militares?_embed=arranchamentos&data=${date}`)
+
+      const dataset = res.data.map(militar => {
+        const arranchamento = militar.arranchamentos.find(arranchamento => arranchamento.data === date)
+        return {
+          id: militar.id,
+          nomeguerra: militar.nomeguerra,
+          posto: militar.posto,
+          arranchamentoId: arranchamento ? arranchamento.id : null,
+          cafe: arranchamento ? arranchamento.cafe === 'S' : false,
+          almoco: arranchamento ? arranchamento.almoco === 'S' : false,
+          jantar: arranchamento ? arranchamento.jantar === 'S' : false
+        }
+      })
 
       dispatch({
         type: 'GET_DAYS',
-        payload: res.data
+        payload: dataset
       })
     } catch (err) {
       dispatch({
@@ -56,6 +87,8 @@ export const GlobalProvider = ({ children }) => {
     loading: state.loading,
     days: state.days,
     getTransactions,
+    createDays,
+    updateDays,
     getDays
   }}>
     {children}
