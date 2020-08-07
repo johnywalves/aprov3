@@ -119,7 +119,7 @@
     },
     {
       "militareId": 1986,
-      "data": "2020-08-05",
+      "data": "2020-08-06",
       "cafe": "S",
       "almoco": "N",
       "jantar": "N",
@@ -134,6 +134,42 @@
       "almoco": "N",
       "jantar": "N",
       "hierarquia": 11
+    },
+    {
+      "militareId": 1990,
+      "data": "2020-08-06",
+      "cafe": "N",
+      "almoco": "S",
+      "jantar": "N",
+      "hierarquia": 11,
+      "id": 1233
+    },
+    {
+      "militareId": 1992,
+      "data": "2020-08-06",
+      "cafe": "N",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11,
+      "id": 1234
+    },
+    {
+      "militareId": 1989,
+      "data": "2020-08-06",
+      "cafe": "S",
+      "almoco": "N",
+      "jantar": "N",
+      "hierarquia": 11,
+      "id": 1235
+    },
+    {
+      "militareId": 1987,
+      "data": "2020-08-06",
+      "cafe": "N",
+      "almoco": "S",
+      "jantar": "N",
+      "hierarquia": 11,
+      "id": 1236
     }
   ],
   "militares": [
