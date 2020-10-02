@@ -22,8 +22,30 @@ export const TransactionList = () => {
 
   useEffect(() => {
     getDays(date);
-    reset({})
+    reset({});
   }, [date, getDays, reset]);
+
+  const onSelectAll = useCallback(() => {
+    days.forEach(day => {
+      const obj = {
+        militareId: day.id,
+        data: date,
+        cafe: 'S',
+        almoco: 'S',
+        jantar: 'S',
+        hierarquia: 11
+      }
+
+      if (day.arranchamentoId) {
+        updateDays(day.arranchamentoId, { ...obj })
+      } else {
+        createDays({ ...obj })
+      }
+    });
+
+    getDays(date);
+    reset({});
+  }, [days, date, getDays, reset, createDays, updateDays])
 
   const onSubmit = useCallback((data) => {
     days.forEach(day => {
@@ -61,6 +83,9 @@ export const TransactionList = () => {
           Salvar
         </button>
       </form>
+      <button className="btn btn-danger mt-3 col-3 p-3" onClick={onSelectAll} >
+        Marcar todos e Salvar
+      </button>
     </>
   );
 };
